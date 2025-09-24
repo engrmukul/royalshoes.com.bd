@@ -1,90 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Royal Shoes Factory - Dhaka</title>
-<meta name="description" content="Royal Shoes Factory in Ashulia, Dhaka produces high-quality, stylish, and durable footwear. Contact us at 01670577300 or info@royalshoes.com.bd">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Poppins', sans-serif; color:#333; line-height:1.5; background:#f8f8f8; }
-    a { text-decoration:none; color:inherit; }
-    h1,h2,h3 { margin-bottom:10px; }
-    header { background:url('https://images.unsplash.com/photo-1591012911207-4d02f7f01a4e?auto=format&fit=crop&w=1500&q=80') no-repeat center/cover; height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; color:white; position:relative; }
-    header::after { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); }
-    .hero-content { position:relative; z-index:1; padding:0 20px; max-width:800px; }
-    header h1 { font-size:2.5em; margin-bottom:15px; }
-    header p { font-size:1.2em; margin-bottom:20px; }
-    .cta { display:inline-block; padding:12px 30px; background:#8B0000; color:white; border-radius:25px; font-weight:600; transition:0.3s; }
-    .cta:hover { background:#a30000; }
-    section { padding:50px 20px; max-width:1000px; margin:auto; }
-    section h2 { text-align:center; font-size:2em; color:#8B0000; margin-bottom:30px; }
-    #about p { text-align:center; max-width:700px; margin:auto; font-size:1.05em; }
-    .cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-    .card { background:white; flex:1 1 260px; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:center; transition: transform 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-    .card img { width:60px; margin-bottom:12px; }
-    .card h3 { color:#8B0000; margin-bottom:8px; font-size:1.2em; }
-    .contact-info { text-align:center; max-width:450px; margin:auto; background:white; padding:25px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
-    .contact-info p { font-size:1.05em; margin:12px 0; }
-    .contact-info a { font-weight:600; color:#8B0000; }
-    footer { background:#222; color:white; text-align:center; padding:20px; font-size:0.9em; }
-    footer a { color:white; margin:0 8px; font-size:1.2em; }
-    footer a:hover { color:#8B0000; }
-    @media (max-width:768px) { header h1 { font-size:2em; } header p { font-size:1em; } .cards { flex-direction:column; align-items:center; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Shoes Factory | Premium Footwear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #07363c;
+            --primary-dark: #052025;
+            --secondary: #1a1a1a;
+            --light: #f8f8f8;
+            --gray: #666;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            min-height: 70vh;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 1912px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        section h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .about p, .contact-info p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info p span {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .contact-info a {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .contact-info a:hover {
+            color: var(--primary-dark);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .value-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .map-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .map-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .map-wrapper:hover {
+            transform: scale(1.02);
+        }
+
+        iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+            display: block;
+        }
+
+        .map-label {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: #f8eaea;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 15px;
+            }
+            
+            section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .values-grid {
+                gap: 20px;
+                margin-top: 30px;
+            }
+            
+            .value-card {
+                padding: 20px;
+            }
+            
+            .map-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .about p, .contact-info p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <img src="hero.png" alt="Royal Shoes Factory - Premium Footwear" class="hero-image">
+    </header>
 
-<!-- Hero Section -->
-<header>
-    <div class="hero-content">
-        <h1>Royal Shoes Factory</h1>
-        <p>High-Quality & Stylish Footwear from Ashulia, Dhaka</p>
-        <a href="#contact" class="cta">Contact Us</a>
-    </div>
-</header>
-
-<!-- About Section -->
-<section id="about">
-    <h2>About Us</h2>
-    <p>Royal Shoes Factory in Ashulia, Dhaka produces premium footwear, combining durability, style, and comfort. Our mission is to craft shoes that people love to wear every day.</p>
-</section>
-
-<!-- Locations Section -->
-<section id="locations">
-    <h2>Our Locations</h2>
-    <div class="cards">
-        <div class="card">
-            <img src="https://img.icons8.com/ios-filled/100/8B0000/factory.png" alt="Factory">
-            <h3>Factory</h3>
-            <p>Nolam, Mirzanagar, Ashulia, Dhaka-1344</p>
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="card about">
+            <p>
+                <strong>Royal Shoes Factory</strong> combines innovation, craftsmanship, and quality to deliver footwear that balances style with comfort. 
+                Our state-of-the-art manufacturing facility ensures precision in every step — from premium material selection to modern design execution.
+            </p>
+            <p>
+                We prioritize durability, elegance, and customer satisfaction, producing footwear that stands out in both local and international markets.
+            </p>
         </div>
-        <div class="card">
-            <img src="https://img.icons8.com/ios-filled/100/8B0000/office.png" alt="Corporate Office">
-            <h3>Corporate Office</h3>
-            <p>House 150, Road 10, Block G, Bashundhara R/A, Dhaka</p>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Premium Quality</h3>
+                <p>We use only the finest materials and employ skilled artisans to create footwear that lasts for years.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Customer Focus</h3>
+                <p>Your satisfaction is our priority. We work closely with clients to meet their specific requirements.</p>
+            </div>
+            
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Global Standards</h3>
+                <p>Our manufacturing processes adhere to international quality standards for consistent excellence.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-        <p><i class="fas fa-phone"></i> <a href="tel:01670577300">01670577300</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:info@royalshoes.com.bd">info@royalshoes.com.bd</a></p>
-    </div>
-</section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <div class="card contact-info">
+                <p>
+                    <span>Email:</span> <a href="mailto:royalshoebd@gmail.com">royalshoebd@gmail.com</a> | 
+                    <span>Phone:</span> <a href="tel:01670577300">01670577300</a>
+                </p>
+                <p><span>Factory Address:</span> Nolam, Mirzanagar, Ashulia, Dhaka-1344</p>
+                <p><span>Corporate Office:</span> House 150, Road 10, Block G, Bashundhara R/A</p>
+            </div>
 
-<!-- Footer -->
-<footer>
-    &copy; 2025 Royal Shoes Factory. All Rights Reserved.<br>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-</footer>
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps?q=23.929925,90.241298&hl=es;z=14&output=embed"></iframe>
+                    <div class="map-label">Factory Location</div>
+                </div>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps?q=23.8246638,90.4299352&hl=es;z=14&output=embed"></iframe>
+                    <div class="map-label">Corporate Office</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer>
+        <div class="footer-content">
+            <div>
+                &copy; 2025 Royal Shoes Factory. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for cards when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to cards
+        document.querySelectorAll('.card, .value-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
