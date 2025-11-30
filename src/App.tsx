@@ -132,7 +132,7 @@ function App() {
                 Contact
               </button>
               <a 
-                href="mailto:royalshoebd@gmail.com" 
+                href="mailto:info@royalshoes.com.bd" 
                 className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-full font-medium hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Get Quote
@@ -175,7 +175,7 @@ function App() {
               </button>
               <div className="px-4">
                 <a 
-                  href="mailto:royalshoebd@gmail.com" 
+                  href="mailto:info@royalshoes.com.bd" 
                   className="block w-full text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-medium hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg"
                 >
                   Get Quote
@@ -433,8 +433,8 @@ function App() {
                   </div>
                   <div>
                     <p className="text-gray-300 mb-1 text-sm sm:text-base">Email</p>
-                    <a href="mailto:royalshoebd@gmail.com" className="text-white text-base sm:text-lg font-semibold hover:text-blue-400 transition-colors break-all">
-                      royalshoebd@gmail.com
+                    <a href="mailto:info@royalshoes.com.bd" className="text-white text-base sm:text-lg font-semibold hover:text-blue-400 transition-colors break-all">
+                      info@royalshoes.com.bd
                     </a>
                   </div>
                 </div>
